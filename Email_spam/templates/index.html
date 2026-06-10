@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Email Spam Detection</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav>
+        <h2 class="logo">📩Email Spam Classifier</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#checker">Checker</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+    <div class="hero-content">
+
+        <div class="icon-bounce">📩🛡️</div>
+
+        <h1 class="gradient-title">
+           Detect Threats Before They Reach You
+        </h1>
+
+        <p>
+          Secure your email with intelligent spam filtering.
+        </p>
+
+        <div class="hero-btns">
+            <a href="#checker"><button>Click Here to Check</button></a>
+        </div>
+
+    </div>
+</section>
+
+
+<br>
+
+<!-- ================= CHECKER ================= -->
+<section id="checker" class="checker-section">
+
+    <h2 class="gradient-title">Email Spam Detection</h2>
+
+    <textarea id="message"placeholder="Paste suspicious email content here..."></textarea>
+
+    <br>
+
+
+    <button onclick="checkSpam()">
+        <i class="fa-solid fa-shield"></i>Predict</button>
+
+    <h2 id="result"></h2>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+    <p>© 2026 Email Spam Detection | Developed with ❤️</p>
+
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

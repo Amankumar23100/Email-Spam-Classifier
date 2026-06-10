@@ -1,0 +1,4 @@
+cd "Email_spam"
+dir
+pip install -r requirement.txt
+python app.py
