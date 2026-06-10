@@ -1,7 +1,9 @@
 
-from flask import Flask, render_template, request, jsonify
-import joblib
+import os
 import warnings
+
+import joblib
+from flask import Flask, jsonify, render_template, request
 from sklearn.exceptions import InconsistentVersionWarning
 
 warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
@@ -60,5 +62,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
 
